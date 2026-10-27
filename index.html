@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechAprende · Portal de Cursos Tecnológicos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado Principal -->
+  <header class="encabezado">
+    <h1>TechAprende</h1>
+    <p>Desarrolla tus habilidades digitales</p>
+  </header>
+
+  <!-- Navegación Responsiva con Flexbox -->
+  <nav class="menu" aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#inscripcion">Inscripción</a>
+  </nav>
+
+  <!-- Contenedor Principal -->
+  <main id="inicio" class="contenedor">
+    <section class="presentacion">
+      <h2>Aprende desarrollo web</h2>
+      <p>
+        Descubre los fundamentos para construir páginas web modernas, adaptables a cualquier dispositivo
+        y desarrolla tus primeros proyectos profesionales.
+      </p>
+    </section>
+
+    <!-- Sección Cursos en CSS Grid -->
+    <section id="cursos">
+      <h2>Nuestros cursos</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>HTML</h3>
+          <p>Aprende a estructurar páginas web semánticas y accesibles.</p>
+          <a href="#inscripcion" class="boton-enlace">Solicitar información</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>CSS</h3>
+          <p>Diseña interfaces atractivas, modernas y 100% responsivas.</p>
+          <a href="#inscripcion" class="boton-enlace">Solicitar información</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>JavaScript</h3>
+          <p>Agrega interactividad, lógica y dinamismo a tus proyectos.</p>
+          <a href="#inscripcion" class="boton-enlace">Solicitar información</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Formulario -->
+    <section id="inscripcion" class="seccion-formulario">
+      <h2>Solicita información</h2>
+      <p class="subtitulo-form">Déjanos tus datos para conocer más sobre nuestra oferta educativa.</p>
+
+      <div id="resultado" aria-live="polite" class="mensaje-box hidden"></div>
+
+      <form id="formulario" novalidate>
+        <!-- Nombre Completo -->
+        <div class="form-group" id="group-nombre">
+          <label for="nombre">Nombre completo *</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Ej. Ana María Gómez">
+          <span class="error-text" id="error-nombre"></span>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="form-group" id="group-correo">
+          <label for="correo">Correo electrónico *</label>
+          <input id="correo" name="correo" type="email" placeholder="ejemplo@dominio.com">
+          <span class="error-text" id="error-correo"></span>
+        </div>
+
+        <!-- Curso de Interés -->
+        <div class="form-group" id="group-curso">
+          <label for="curso">Curso de interés *</label>
+          <select id="curso" name="curso">
+            <option value="">Selecciona un curso</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+          <span class="error-text" id="error-curso"></span>
+        </div>
+
+        <!-- Botones -->
+        <div class="button-group">
+          <button type="submit">Enviar solicitud</button>
+          <button type="reset" class="boton-secundario">Limpiar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>TechAprende · Proyecto académico de Desarrollo Web I</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
